@@ -1,0 +1,249 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* White page, black ink, one taxi-yellow accent (used as a fill, never as text on white) */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 4%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 4%;
+    --taxi: 46 100% 50%;
+    --primary: 46 100% 50%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 4%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 32%;
+    --accent: 0 0% 94%;
+    --accent-foreground: 0 0% 4%;
+    --border: 0 0% 0% / 0.14;
+    --input: 0 0% 0% / 0.3;
+    --ring: 0 0% 8%;
+    --radius: 0.625rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  ::selection {
+    background: hsl(var(--taxi));
+    color: #000;
+  }
+}
+
+@layer components {
+  /* The black-and-yellow check seen on taxi roofs and rank signage */
+  .checker {
+    background: repeating-conic-gradient(#050505 0% 25%, hsl(var(--taxi)) 0% 50%) 0 0 / 20px 20px;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Illustrated scenes                                                  */
+/* ------------------------------------------------------------------ */
+
+.pivot-top {
+  transform-box: fill-box;
+  transform-origin: 50% 0%;
+}
+.pivot-bottom {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+}
+
+.s-chip,
+.s-beam,
+.s-coin {
+  opacity: 0;
+}
+
+/* ---- Hero scene: one loop = 10s ---- */
+.s-commuter { animation: s-commuter 10s ease-in-out infinite; }
+.s-legA     { animation: s-legA 10s ease-in-out infinite; }
+.s-legB     { animation: s-legB 10s ease-in-out infinite; }
+.s-arm      { animation: s-arm 10s ease-in-out infinite; }
+.s-beam     { animation: s-beam 10s linear infinite; }
+.s-coin     { animation: s-coin 10s ease-in-out infinite; }
+.s-nod      { animation: s-nod 10s ease-in-out infinite; }
+.s-chip-fare   { animation: s-chip-fare 10s ease-out infinite; }
+.s-chip-paid   { animation: s-chip-paid 10s ease-out infinite; }
+.s-chip-driver { animation: s-chip-driver 10s ease-out infinite; }
+
+@keyframes s-commuter {
+  0%   { transform: translateX(-200px); opacity: 0; }
+  3%   { opacity: 1; }
+  30%, 66% { transform: translateX(0); opacity: 1; }
+  80%, 100% { transform: translateX(90px); opacity: 0; }
+}
+@keyframes s-legA {
+  0% { transform: rotate(0); }
+  3% { transform: rotate(20deg); } 6% { transform: rotate(-20deg); }
+  9% { transform: rotate(20deg); } 12% { transform: rotate(-20deg); }
+  15% { transform: rotate(20deg); } 18% { transform: rotate(-20deg); }
+  21% { transform: rotate(20deg); } 24% { transform: rotate(-20deg); }
+  27% { transform: rotate(20deg); } 30%, 66% { transform: rotate(0); }
+  69% { transform: rotate(20deg); } 72% { transform: rotate(-20deg); }
+  75% { transform: rotate(20deg); } 78% { transform: rotate(-20deg); }
+  80%, 100% { transform: rotate(0); }
+}
+@keyframes s-legB {
+  0% { transform: rotate(0); }
+  3% { transform: rotate(-20deg); } 6% { transform: rotate(20deg); }
+  9% { transform: rotate(-20deg); } 12% { transform: rotate(20deg); }
+  15% { transform: rotate(-20deg); } 18% { transform: rotate(20deg); }
+  21% { transform: rotate(-20deg); } 24% { transform: rotate(20deg); }
+  27% { transform: rotate(-20deg); } 30%, 66% { transform: rotate(0); }
+  69% { transform: rotate(-20deg); } 72% { transform: rotate(20deg); }
+  75% { transform: rotate(-20deg); } 78% { transform: rotate(20deg); }
+  80%, 100% { transform: rotate(0); }
+}
+@keyframes s-arm {
+  0%, 30% { transform: rotate(0); }
+  38%, 60% { transform: rotate(-72deg); }
+  66%, 100% { transform: rotate(0); }
+}
+@keyframes s-beam {
+  0%, 38% { opacity: 0; }
+  40% { opacity: 0.9; } 45% { opacity: 0.4; } 50% { opacity: 0.9; } 55% { opacity: 0.4; }
+  58%, 100% { opacity: 0; }
+}
+@keyframes s-chip-fare {
+  0%, 40% { opacity: 0; transform: translateY(8px) scale(0.8); }
+  44%, 56% { opacity: 1; transform: translateY(0) scale(1); }
+  59%, 100% { opacity: 0; transform: translateY(0) scale(1); }
+}
+@keyframes s-chip-paid {
+  0%, 58% { opacity: 0; transform: translateY(8px) scale(0.8); }
+  62%, 78% { opacity: 1; transform: translateY(0) scale(1); }
+  82%, 100% { opacity: 0; transform: translateY(0) scale(1); }
+}
+@keyframes s-chip-driver {
+  0%, 60% { opacity: 0; transform: translateY(8px) scale(0.8); }
+  64%, 82% { opacity: 1; transform: translateY(0) scale(1); }
+  86%, 100% { opacity: 0; transform: translateY(0) scale(1); }
+}
+@keyframes s-coin {
+  0%, 55% { opacity: 0; transform: translate(0, 0); }
+  57% { opacity: 1; transform: translate(0, 0); }
+  63% { opacity: 1; transform: translate(186px, -118px); }
+  64%, 100% { opacity: 0; transform: translate(186px, -118px); }
+}
+@keyframes s-nod {
+  0%, 60% { transform: translateY(0); }
+  63% { transform: translateY(3px); }
+  66%, 100% { transform: translateY(0); }
+}
+
+/* ---- Spaza shop scene: one loop = 9s ---- */
+.s2-customer { animation: s2-customer 9s ease-in-out infinite; }
+.s2-legA     { animation: s2-legA 9s ease-in-out infinite; }
+.s2-legB     { animation: s2-legB 9s ease-in-out infinite; }
+.s2-arm      { animation: s2-arm 9s ease-in-out infinite; }
+.s2-note     { animation: s2-note 9s steps(1, end) infinite; }
+.s2-vendor   { animation: s2-vendor 9s ease-in-out infinite; }
+.s2-chip-cash   { animation: s2-chip-cash 9s ease-out infinite; }
+.s2-chip-wallet { animation: s2-chip-wallet 9s ease-out infinite; }
+
+@keyframes s2-customer {
+  0%   { transform: translateX(-170px); opacity: 0; }
+  3%   { opacity: 1; }
+  24%, 84% { transform: translateX(0); opacity: 1; }
+  94%, 100% { transform: translateX(0); opacity: 0; }
+}
+@keyframes s2-legA {
+  0% { transform: rotate(0); }
+  3% { transform: rotate(20deg); } 6% { transform: rotate(-20deg); }
+  9% { transform: rotate(20deg); } 12% { transform: rotate(-20deg); }
+  15% { transform: rotate(20deg); } 18% { transform: rotate(-20deg); }
+  21% { transform: rotate(20deg); } 24%, 100% { transform: rotate(0); }
+}
+@keyframes s2-legB {
+  0% { transform: rotate(0); }
+  3% { transform: rotate(-20deg); } 6% { transform: rotate(20deg); }
+  9% { transform: rotate(-20deg); } 12% { transform: rotate(20deg); }
+  15% { transform: rotate(-20deg); } 18% { transform: rotate(20deg); }
+  21% { transform: rotate(-20deg); } 24%, 100% { transform: rotate(0); }
+}
+@keyframes s2-arm {
+  0%, 28% { transform: rotate(0); }
+  36%, 48% { transform: rotate(-80deg); }
+  56%, 100% { transform: rotate(0); }
+}
+@keyframes s2-note {
+  0%  { opacity: 1; }
+  47% { opacity: 0; }
+  100% { opacity: 0; }
+}
+@keyframes s2-vendor {
+  0%, 46% { transform: translateY(0); }
+  49% { transform: translateY(3px); }
+  52%, 100% { transform: translateY(0); }
+}
+@keyframes s2-chip-cash {
+  0%, 36% { opacity: 0; transform: translateY(8px) scale(0.8); }
+  40%, 52% { opacity: 1; transform: translateY(0) scale(1); }
+  55%, 100% { opacity: 0; transform: translateY(0) scale(1); }
+}
+@keyframes s2-chip-wallet {
+  0%, 56% { opacity: 0; transform: translateY(8px) scale(0.8); }
+  60%, 84% { opacity: 1; transform: translateY(0) scale(1); }
+  88%, 100% { opacity: 0; transform: translateY(0) scale(1); }
+}
+
+/* ---- Driving taxi in the footer ---- */
+.taxi-drive {
+  animation: taxi-drive 24s linear infinite;
+}
+@keyframes taxi-drive {
+  from { transform: translateX(-200px); }
+  to   { transform: translateX(100vw); }
+}
+.spin-wheel {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: wheel 0.7s linear infinite;
+}
+@keyframes wheel {
+  to { transform: rotate(360deg); }
+}
+
+/* ------------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  /* Scenes show a still frame instead of a loop: everyone visible, payment done */
+  .scene *,
+  .taxi-drive,
+  .taxi-drive * {
+    animation: none !important;
+  }
+  .scene .s-chip-paid,
+  .scene .s-chip-driver,
+  .scene .s2-chip-wallet {
+    opacity: 1;
+  }
+  .taxi-drive {
+    transform: translateX(20vw);
+  }
+}
