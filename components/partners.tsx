@@ -1,4 +1,5 @@
-import { Handshake, Landmark } from "lucide-react";
+import Image from "next/image";
+import { Handshake } from "lucide-react";
 
 import { SectionHeading } from "@/components/section-heading";
 
@@ -23,9 +24,13 @@ export function Partners() {
           </div>
 
           <div className="flex flex-col justify-between rounded-xl border-2 border-black bg-white p-8 shadow-[6px_6px_0_0_#000]">
-            <div className="flex h-12 w-12 items-center justify-center rounded-md border-2 border-black text-black">
-              <img src="firstrand_logo.png" alt="FirstRand Bank Logo" />
-            </div>
+            <Image
+              src="/brand/firstrand-logo.png"
+              alt="FirstRand Bank logo"
+              width={602}
+              height={506}
+              className="h-24 w-auto self-start"
+            />
             <div className="mt-6">
               <p className="text-sm font-semibold uppercase tracking-widest text-neutral-600">
                 Banked with

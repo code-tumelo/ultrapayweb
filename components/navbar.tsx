@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Bus, Menu, X } from "lucide-react";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -17,9 +18,17 @@ const links = [
 export function Wordmark({ inverted = false }: { inverted?: boolean }) {
   return (
     <span className="flex items-center gap-2.5">
-      <span className="flex h-8 w-8 items-center justify-center rounded-md border-2 border-black bg-taxi text-black">
-        <Bus className="h-5 w-5" />
-      </span>
+      <Image
+        src="/brand/ultrapay-logo.png"
+        alt=""
+        width={40}
+        height={40}
+        priority
+        className={cn(
+          "h-10 w-10 rounded-md border-2",
+          inverted ? "border-white/40" : "border-black"
+        )}
+      />
       <span
         className={cn(
           "font-display text-2xl font-extrabold uppercase leading-none tracking-wide",
