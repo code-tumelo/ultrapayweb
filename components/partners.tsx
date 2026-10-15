@@ -31,14 +31,7 @@ export function Partners() {
               height={506}
               className="h-24 w-auto self-start"
             />
-            <div className="mt-6">
-              <p className="text-sm font-semibold uppercase tracking-widest text-neutral-600">
-                Banked with
-              </p>
-              <h3 className="mt-2 font-display text-4xl font-bold uppercase leading-none text-black">
-                FirstRand Bank
-              </h3>
-            </div>
+            
           </div>
         </div>
       </div>

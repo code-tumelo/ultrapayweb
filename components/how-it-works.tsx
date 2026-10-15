@@ -75,7 +75,7 @@ export function HowItWorks() {
                   />
                 ))}
               </div>
-              <p className="mt-3 text-xs text-neutral-500">Illustrative screens</p>
+             
             </div>
           </div>
 
