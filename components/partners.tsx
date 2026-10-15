@@ -7,7 +7,7 @@ export function Partners() {
   return (
     <section id="partners" className="scroll-mt-16 py-24 md:py-32">
       <div className="container">
-        <SectionHeading title="Built with the associations. Banked with FirstRand." />
+        <SectionHeading title="Built with South African associations." />
 
         <div className="mt-16 grid max-w-4xl gap-6 md:grid-cols-2">
           <div className="rounded-xl border-2 border-black bg-white p-8 shadow-[6px_6px_0_0_#000]">
