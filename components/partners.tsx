@@ -22,17 +22,6 @@ export function Partners() {
               member taxi, route and rank speaks the same payment language.
             </p>
           </div>
-
-          <div className="flex flex-col justify-between rounded-xl border-2 border-black bg-white p-8 shadow-[6px_6px_0_0_#000]">
-            <Image
-              src="/brand/firstrand-logo.png"
-              alt="FirstRand Bank logo"
-              width={602}
-              height={506}
-              className="h-24 w-auto self-start"
-            />
-            
-          </div>
         </div>
       </div>
     </section>
