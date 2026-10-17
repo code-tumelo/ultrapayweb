@@ -2,9 +2,9 @@
 // The three NEXT_PUBLIC_* values are safe to expose in the browser: EmailJS designed the
 // public key for client-side use. They must be written as plain `process.env.NEXT_PUBLIC_X`
 // so Next.js can inline them at build time.
-const SERVICE_ID = process.env.EMAILJS_SERVICE_ID;
-const TEMPLATE_ID = process.env.EMAILJS_TEMPLATE_ID;
-const PUBLIC_KEY = process.env.EMAILJS_PUBLIC_KEY;
+const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
 /** An error whose message is safe to show to visitors. */
 export class SignupError extends Error {}
