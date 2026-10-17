@@ -1,4 +1,4 @@
-// Shared by the Notify Me form and the /api/notify route so they never drift apart.
+// Role options and contact validation used by the Notify Me form.
 export const ROLES = [
   "Taxi owner / operator (SME)",
   "Taxi association or forum",
@@ -6,9 +6,24 @@ export const ROLES = [
   "Vendor / spaza shop",
   "Commuter",
   "Commuter without a bank account",
+  "Other",
 ] as const;
 
 export type Role = (typeof ROLES)[number];
+
+export const PROVINCES = [
+  "Eastern Cape",
+  "Free State",
+  "Gauteng",
+  "KwaZulu-Natal",
+  "Limpopo",
+  "Mpumalanga",
+  "North West",
+  "Northern Cape",
+  "Western Cape",
+] as const;
+
+export type Province = (typeof PROVINCES)[number];
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
