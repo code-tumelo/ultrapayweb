@@ -9,11 +9,11 @@ export function RouteLines() {
       fill="none"
     >
       <g strokeLinecap="round" strokeDasharray="6 14" className="[&>path]:animate-dash">
-        <path d="M-40 640 C 220 600, 300 380, 560 400 S 900 560, 1240 220" stroke="rgba(0,0,0,0.28)" strokeWidth="2" />
-        <path d="M-40 200 C 200 260, 360 120, 620 180 S 960 380, 1240 520" stroke="rgba(0,0,0,0.16)" strokeWidth="1.5" />
-        <path d="M200 860 C 320 640, 520 640, 700 520 S 1000 180, 1240 120" stroke="rgba(0,0,0,0.12)" strokeWidth="1.5" />
+        <path d="M-40 640 C 220 600, 300 380, 560 400 S 900 560, 1240 220" stroke="rgba(63,67,71,0.28)" strokeWidth="2" />
+        <path d="M-40 200 C 200 260, 360 120, 620 180 S 960 380, 1240 520" stroke="rgba(63,67,71,0.16)" strokeWidth="1.5" />
+        <path d="M200 860 C 320 640, 520 640, 700 520 S 1000 180, 1240 120" stroke="rgba(63,67,71,0.12)" strokeWidth="1.5" />
       </g>
-      <g fill="#fff" stroke="#111" strokeWidth="2.5">
+      <g fill="#F3F4F5" stroke="#3F4347" strokeWidth="2.5">
         <circle cx="1030" cy="400" r="7" />
         <circle cx="930" cy="610" r="7" />
       </g>

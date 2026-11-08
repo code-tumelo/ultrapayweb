@@ -12,22 +12,22 @@ export function SectionHeading({ eyebrow, title, description, inverted = false }
       {eyebrow && (
         <p
           className={`flex items-center gap-3 text-sm font-bold uppercase tracking-[0.2em] ${
-            inverted ? "text-taxi" : "text-foreground"
+            inverted ? "text-silver-300" : "text-foreground"
           }`}
         >
-          <span aria-hidden className="h-1.5 w-8 bg-taxi" />
+          <span aria-hidden className="h-1.5 w-8 bg-metal" />
           {eyebrow}
         </p>
       )}
       <h2
         className={`mt-4 font-display text-4xl font-bold uppercase leading-[0.95] tracking-tight md:text-6xl ${
-          inverted ? "text-white" : "text-foreground"
+          inverted ? "text-silver-50" : "text-foreground"
         }`}
       >
         {title}
       </h2>
       {description && (
-        <p className={`mt-5 text-lg leading-relaxed ${inverted ? "text-gray-300" : "text-muted-foreground"}`}>
+        <p className={`mt-5 text-lg leading-relaxed ${inverted ? "text-silver-300" : "text-muted-foreground"}`}>
           {description}
         </p>
       )}

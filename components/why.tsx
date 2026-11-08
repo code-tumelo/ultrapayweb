@@ -20,7 +20,7 @@ const reasons = [
 
 export function Why() {
   return (
-    <section id="why" className="scroll-mt-16 bg-black py-24 md:py-32">
+    <section id="why" className="scroll-mt-16 bg-charcoal py-24 md:py-32">
       <div className="container">
         <SectionHeading inverted eyebrow="Why UltraPay" title="Why taxis need this" />
 
@@ -28,12 +28,12 @@ export function Why() {
           {reasons.map((reason) => (
             <div
               key={reason.title}
-              className="grid items-center gap-4 border-t border-white/20 py-10 md:grid-cols-[1.2fr_1fr] md:gap-12"
+              className="grid items-center gap-4 border-t border-silver-50/20 py-10 md:grid-cols-[1.2fr_1fr] md:gap-12"
             >
-              <h3 className="font-display text-5xl font-extrabold uppercase leading-[0.95] text-taxi md:text-7xl">
+              <h3 className="font-display text-5xl font-extrabold uppercase leading-[0.95] text-silver-300 md:text-7xl">
                 {reason.title}
               </h3>
-              <p className="text-lg leading-relaxed text-gray-300">{reason.description}</p>
+              <p className="text-lg leading-relaxed text-silver-300">{reason.description}</p>
             </div>
           ))}
         </div>

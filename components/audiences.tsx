@@ -2,7 +2,6 @@
 
 import { useRef, useState } from "react";
 import {
-  ArrowRight,
   Building2,
   Handshake,
   Smartphone,
@@ -113,10 +112,10 @@ export function Audiences() {
                 onClick={() => setActive(i)}
                 onKeyDown={(e) => onKeyDown(e, i)}
                 className={cn(
-                  "shrink-0 rounded-md border-2 px-5 py-2.5 font-display text-lg font-bold uppercase tracking-wide transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2",
+                  "shrink-0 rounded-md border-2 px-5 py-2.5 font-display text-lg font-bold uppercase tracking-wide transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-charcoal focus-visible:ring-offset-2",
                   i === active
-                    ? "border-black bg-taxi text-black shadow-[3px_3px_0_0_#000]"
-                    : "border-black/20 bg-white text-black/70 hover:border-black hover:text-black"
+                    ? "border-charcoal bg-metal text-charcoal shadow-[3px_3px_0_0_#3F4347]"
+                    : "border-charcoal/20 bg-silver-50 text-charcoal/70 hover:border-charcoal hover:text-charcoal"
                 )}
               >
                 {a.tab}
@@ -129,26 +128,19 @@ export function Audiences() {
             role="tabpanel"
             id={`panel-${current.id}`}
             aria-labelledby={`tab-${current.id}`}
-            className="mt-6 animate-fade rounded-xl border-2 border-black bg-white p-8 shadow-[8px_8px_0_0_#000] md:p-12"
+            className="mt-6 animate-fade rounded-xl border-2 border-charcoal bg-silver-50 p-8 shadow-[8px_8px_0_0_#3F4347] md:p-12"
           >
             <div className="flex flex-col gap-8 md:flex-row md:items-center md:gap-12">
-              <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-2xl border-2 border-black bg-taxi text-black">
+              <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-2xl border-2 border-charcoal bg-metal text-charcoal">
                 <Icon className="h-12 w-12" strokeWidth={1.75} />
               </div>
               <div>
-                <h3 className="font-display text-4xl font-bold uppercase leading-none text-black md:text-5xl">
+                <h3 className="font-display text-4xl font-bold uppercase leading-none text-charcoal md:text-5xl">
                   {current.title}
                 </h3>
-                <p className="mt-4 max-w-2xl text-xl leading-relaxed text-neutral-700">
+                <p className="mt-4 max-w-2xl text-xl leading-relaxed text-charcoal-soft">
                   {current.description}
                 </p>
-                <a
-                  href="#notify"
-                  className="mt-6 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-black underline decoration-taxi decoration-4 underline-offset-4 hover:decoration-black"
-                >
-                  Get notified at launch
-                  <ArrowRight className="h-4 w-4" />
-                </a>
               </div>
             </div>
           </div>

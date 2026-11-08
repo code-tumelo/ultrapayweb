@@ -26,16 +26,16 @@ export function Wordmark({ inverted = false }: { inverted?: boolean }) {
         priority
         className={cn(
           "h-10 w-10 rounded-md border-2",
-          inverted ? "border-white/40" : "border-black"
+          inverted ? "border-silver-50/40" : "border-charcoal"
         )}
       />
       <span
         className={cn(
           "font-display text-2xl font-extrabold uppercase leading-none tracking-wide",
-          inverted ? "text-white" : "text-black"
+          inverted ? "text-silver-50" : "text-charcoal"
         )}
       >
-        Ultra<span className={inverted ? "text-taxi" : "bg-taxi px-1"}>Pay</span>
+        Ultra<span className={inverted ? "text-silver-300" : "bg-metal px-1"}>Pay</span>
       </span>
     </span>
   );
@@ -56,7 +56,7 @@ export function Navbar() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        scrolled || open ? "border-b border-black/10 bg-white/90 backdrop-blur-md" : "bg-transparent"
+        scrolled || open ? "border-b border-charcoal/10 bg-silver-50/90 backdrop-blur-md" : "bg-transparent"
       )}
     >
       <nav className="container flex h-16 items-center justify-between">
@@ -72,11 +72,6 @@ export function Navbar() {
           ))}
         </div>
 
-        <div className="hidden xl:block">
-          <Button size="sm" asChild>
-            <a href="#notify">Notify me</a>
-          </Button>
-        </div>
 
         <Button
           variant="ghost"
@@ -97,16 +92,11 @@ export function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-black/5 hover:text-foreground"
+              className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-charcoal/5 hover:text-foreground"
             >
               {link.label}
             </a>
           ))}
-          <Button className="mt-2" asChild>
-            <a href="#notify" onClick={() => setOpen(false)}>
-              Notify me
-            </a>
-          </Button>
         </div>
       )}
     </header>

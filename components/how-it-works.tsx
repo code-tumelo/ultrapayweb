@@ -51,7 +51,7 @@ export function HowItWorks() {
   }, []);
 
   return (
-    <section id="how" className="scroll-mt-16 border-y-2 border-black bg-neutral-100 py-24 md:py-32">
+    <section id="how" className="scroll-mt-16 border-y-2 border-charcoal bg-silver-100 py-24 md:py-32">
       <div className="container">
         <SectionHeading eyebrow="How it works" title="Scan. Confirm. Ride." />
 
@@ -69,13 +69,13 @@ export function HowItWorks() {
                   <span
                     key={i}
                     className={cn(
-                      "h-2 rounded-full border border-black transition-all",
-                      i === active ? "w-8 bg-taxi" : "w-3 bg-white"
+                      "h-2 rounded-full border border-charcoal transition-all",
+                      i === active ? "w-8 bg-metal" : "w-3 bg-silver-50"
                     )}
                   />
                 ))}
               </div>
-             
+              <p className="mt-3 text-xs text-charcoal-soft">Illustrative screens</p>
             </div>
           </div>
 
@@ -102,13 +102,13 @@ export function HowItWorks() {
                     i === active ? "lg:opacity-100" : "lg:opacity-35"
                   )}
                 >
-                  <span className="inline-flex h-16 min-w-16 items-center justify-center rounded-xl border-2 border-black bg-taxi px-3 font-display text-5xl font-extrabold leading-none text-black shadow-[4px_4px_0_0_#000]">
+                  <span className="inline-flex h-16 min-w-16 items-center justify-center rounded-xl border-2 border-charcoal bg-metal px-3 font-display text-5xl font-extrabold leading-none text-charcoal shadow-[4px_4px_0_0_#3F4347]">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="mt-5 font-display text-4xl font-bold uppercase leading-none text-black md:text-5xl">
+                  <h3 className="mt-5 font-display text-4xl font-bold uppercase leading-none text-charcoal md:text-5xl">
                     {s.title}
                   </h3>
-                  <p className="mt-4 max-w-md text-lg leading-relaxed text-neutral-700">
+                  <p className="mt-4 max-w-md text-lg leading-relaxed text-charcoal-soft">
                     {s.description}
                   </p>
                 </div>

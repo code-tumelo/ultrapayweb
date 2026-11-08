@@ -32,11 +32,11 @@ export function Person({
       {/* legs */}
       <g className={cn("pivot-top", legBClass)}>
         <rect x={1} y={-50} width={11} height={50} rx={5} fill={pants} />
-        <rect x={1} y={-6} width={16} height={6} rx={3} fill="#111" />
+        <rect x={1} y={-6} width={16} height={6} rx={3} fill="#3F4347" />
       </g>
       <g className={cn("pivot-top", legAClass)}>
         <rect x={-12} y={-50} width={11} height={50} rx={5} fill={pants} />
-        <rect x={-10} y={-6} width={16} height={6} rx={3} fill="#111" />
+        <rect x={-10} y={-6} width={16} height={6} rx={3} fill="#3F4347" />
       </g>
 
       {/* back arm */}
@@ -48,7 +48,7 @@ export function Person({
       {/* head */}
       <circle cx={2} cy={-118} r={14} fill={skin} />
       <path d="M-12 -121 A14 14 0 0 1 16 -121 Z" fill={hair} />
-      <circle cx={8} cy={-117} r={1.6} fill="#111" />
+      <circle cx={8} cy={-117} r={1.6} fill="#3F4347" />
 
       {/* front arm (pivots at the shoulder) */}
       <g transform="translate(13 -96)">
@@ -73,11 +73,11 @@ interface ChipProps {
 }
 
 /** A small speech-bubble style label that pops in and out. */
-export function Chip({ x, y, w, text, className, fill = "#fff", color = "#111" }: ChipProps) {
+export function Chip({ x, y, w, text, className, fill = "#F3F4F5", color = "#3F4347" }: ChipProps) {
   return (
     <g transform={`translate(${x} ${y})`}>
       <g className={cn("s-chip pivot-bottom", className)}>
-        <rect x={-w / 2} y={-15} width={w} height={30} rx={15} fill={fill} stroke="#111" strokeWidth={2.5} />
+        <rect x={-w / 2} y={-15} width={w} height={30} rx={15} fill={fill} stroke="#3F4347" strokeWidth={2.5} />
         <text
           textAnchor="middle"
           y={5}

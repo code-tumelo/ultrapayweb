@@ -43,21 +43,21 @@ const features = [
 
 export function Features() {
   return (
-    <section id="features" className="scroll-mt-16 border-t-2 border-black py-24 md:py-32">
+    <section id="features" className="scroll-mt-16 border-t-2 border-charcoal py-24 md:py-32">
       <div className="container">
         <SectionHeading eyebrow="Features" title="One fare, one tap, every taxi" />
 
         <div className="mt-16 grid gap-x-16 md:grid-cols-2">
           {features.map(({ icon: Icon, title, description }) => (
-            <div key={title} className="flex gap-5 border-t border-black/15 py-8">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border-2 border-black bg-taxi text-black">
+            <div key={title} className="flex gap-5 border-t border-charcoal/15 py-8">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border-2 border-charcoal bg-metal text-charcoal">
                 <Icon className="h-6 w-6" />
               </div>
               <div>
-                <h3 className="font-display text-2xl font-bold uppercase leading-none text-black">
+                <h3 className="font-display text-2xl font-bold uppercase leading-none text-charcoal">
                   {title}
                 </h3>
-                <p className="mt-2 leading-relaxed text-neutral-700">{description}</p>
+                <p className="mt-2 leading-relaxed text-charcoal-soft">{description}</p>
               </div>
             </div>
           ))}

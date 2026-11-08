@@ -1,7 +1,6 @@
+import { Button } from "@/components/ui/button";
 import { CheckerStrip } from "@/components/checker-strip";
-import { Countdown } from "@/components/countdown";
 import { HeroScene } from "@/components/hero-scene";
-import { NotifyForm } from "@/components/notify-form";
 import { RouteLines } from "@/components/route-lines";
 
 const delay = (s: number) => ({ animationDelay: `${s}s` });
@@ -15,10 +14,10 @@ export function Hero() {
         {/* Intro */}
         <div className="min-w-0 lg:col-start-1 lg:row-start-1">
           <p
-            className="animate-rise inline-flex items-center gap-2 border-2 border-black bg-taxi px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-black shadow-[3px_3px_0_0_#000] sm:text-sm"
+            className="animate-rise inline-flex items-center gap-2 border-2 border-charcoal bg-metal px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-charcoal shadow-[3px_3px_0_0_#3F4347] sm:text-sm"
             style={delay(0)}
           >
-            South Africa&apos;s taxis go cashless · Launching 31 October 2026
+            South Africa&apos;s taxis go cashless · Now live
           </p>
 
           <h1
@@ -26,7 +25,7 @@ export function Hero() {
             style={delay(0.1)}
           >
             No cash. No change.{" "}
-            <span className="bg-taxi px-2 [box-decoration-break:clone]">Just scan &amp; go.</span>
+            <span className="bg-metal px-2 [box-decoration-break:clone]">Just scan &amp; go.</span>
           </h1>
 
           <p
@@ -47,19 +46,23 @@ export function Hero() {
           <HeroScene />
         </div>
 
-        {/* Countdown + sign-up */}
+        {/* Calls to action */}
         <div className="min-w-0 lg:col-start-1 lg:row-start-2">
-          <div className="animate-rise" style={delay(0.3)}>
-            <Countdown />
+          <div className="animate-rise flex flex-wrap gap-3" style={delay(0.3)}>
+            <Button size="lg" asChild>
+              <a href="#how">See how it works</a>
+            </Button>
+            <Button size="lg" variant="outline" asChild>
+              <a href="#audiences">Who it&apos;s for</a>
+            </Button>
           </div>
-
-          <div className="animate-rise mt-8" style={delay(0.4)}>
-            <NotifyForm />
-            <p className="mt-2 max-w-xl text-sm text-muted-foreground">
-              For taxi owners, associations, drivers, vendors and commuters
-              across South Africa.
-            </p>
-          </div>
+          <p
+            className="animate-rise mt-4 max-w-xl text-sm text-muted-foreground"
+            style={delay(0.4)}
+          >
+            For taxi owners, associations, drivers, vendors and commuters
+            across South Africa.
+          </p>
         </div>
       </div>
 

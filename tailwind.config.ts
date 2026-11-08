@@ -18,7 +18,16 @@ const config: Config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        taxi: "hsl(var(--taxi))",
+        silver: {
+          50: "#F3F4F5",
+          100: "#E6E7E9",
+          300: "#BFC3C8",
+          500: "#8A8F95",
+        },
+        charcoal: {
+          DEFAULT: "#3F4347",
+          soft: "#565B61",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

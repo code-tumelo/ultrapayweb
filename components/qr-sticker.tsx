@@ -51,10 +51,10 @@ export function Pattern(props: React.SVGProps<SVGSVGElement>) {
       aria-hidden
       {...props}
     >
-      <rect x={-1} y={-1} width={N + 2} height={N + 2} fill="#fff" />
+      <rect x={-1} y={-1} width={N + 2} height={N + 2} fill="#F3F4F5" />
       {PATTERN.flatMap((row, r) =>
         row.map((on, c) =>
-          on ? <rect key={`${r}-${c}`} x={c} y={r} width={1} height={1} fill="#000" /> : null
+          on ? <rect key={`${r}-${c}`} x={c} y={r} width={1} height={1} fill="#3F4347" /> : null
         )
       )}
     </svg>
@@ -79,18 +79,18 @@ export function QrSticker({ className, compact = false }: QrStickerProps) {
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-2xl border-4 border-white bg-white shadow-2xl",
+        "overflow-hidden rounded-2xl border-4 border-silver-50 bg-silver-50 shadow-2xl",
         className
       )}
     >
-      <div className="bg-taxi px-4 py-2 text-center font-display text-2xl font-extrabold uppercase leading-none tracking-wide text-black">
+      <div className="bg-metal px-4 py-2 text-center font-display text-2xl font-extrabold uppercase leading-none tracking-wide text-charcoal">
         Scan &amp; Go
       </div>
       <div className="p-3">
         <Pattern className="block w-full" />
       </div>
-      <div className="bg-black px-4 py-2 text-center font-display text-lg font-bold uppercase leading-none tracking-wider text-white">
-        Ultra<span className="text-taxi">Pay</span>
+      <div className="bg-charcoal px-4 py-2 text-center font-display text-lg font-bold uppercase leading-none tracking-wider text-silver-50">
+        Ultra<span className="text-silver-300">Pay</span>
       </div>
     </div>
   );

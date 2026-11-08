@@ -9,13 +9,13 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        // Chunky sticker look: yellow, black outline, hard shadow
+        // Chunky sticker look: charcoal fill, hard silver shadow
         default:
-          "border-2 border-black bg-primary text-primary-foreground shadow-[3px_3px_0_0_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0_0_#000] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none",
+          "border-2 border-charcoal bg-primary text-primary-foreground shadow-[3px_3px_0_0_#8A8F95] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0_0_#8A8F95] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none",
         outline:
-          "border-2 border-black bg-white text-foreground shadow-[3px_3px_0_0_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0_0_#000]",
+          "border-2 border-charcoal bg-metal text-foreground shadow-[3px_3px_0_0_#3F4347] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0_0_#3F4347]",
         ghost:
-          "font-semibold normal-case tracking-normal text-muted-foreground hover:bg-black/5 hover:text-foreground",
+          "font-semibold normal-case tracking-normal text-muted-foreground hover:bg-charcoal/5 hover:text-foreground",
         link: "text-foreground underline-offset-4 hover:underline",
       },
       size: {
