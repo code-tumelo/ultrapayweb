@@ -7,7 +7,7 @@ export function Partners() {
   return (
     <section id="partners" className="scroll-mt-16 py-24 md:py-32">
       <div className="container">
-        <SectionHeading title="Built with the associations. Banked with FirstRand." />
+        <SectionHeading title="Built with the associations." />
 
         <div className="mt-14 grid max-w-4xl gap-4 md:grid-cols-2">
           <div className="card-metal rounded-3xl p-8 ring-1 ring-ink/10">

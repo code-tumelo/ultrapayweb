@@ -17,7 +17,7 @@ export function WalletCard() {
       <div className="card-ink rounded-3xl p-6 text-silver-50 shadow-[0_40px_70px_-30px_rgba(14,15,16,0.7)] ring-1 ring-ink/20 sm:p-8">
         <div className="flex items-center justify-between text-xs font-semibold tracking-[0.2em] text-silver-300">
           <span>ULTRAPAY WALLET</span>
-          <span>Phone number</span>
+          <span>081 234 5678</span>
         </div>
         <p className="mt-10 text-sm text-silver-300">Balance</p>
         <p className="font-display text-5xl font-semibold tracking-tight">R32.00</p>
@@ -34,7 +34,7 @@ export function WalletCard() {
           ))}
         </div>
       </div>
-      <p className="mt-4 text-center text-xs text-charcoal-soft">Illustrative screen</p>
+      
     </div>
   );
 }
