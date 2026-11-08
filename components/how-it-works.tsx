@@ -51,7 +51,7 @@ export function HowItWorks() {
   }, []);
 
   return (
-    <section id="how" className="scroll-mt-16 border-y-2 border-charcoal bg-silver-100 py-24 md:py-32">
+    <section id="how" className="scroll-mt-16 bg-silver-100 py-24 md:py-32">
       <div className="container">
         <SectionHeading eyebrow="How it works" title="Scan. Confirm. Ride." />
 
@@ -69,8 +69,8 @@ export function HowItWorks() {
                   <span
                     key={i}
                     className={cn(
-                      "h-2 rounded-full border border-charcoal transition-all",
-                      i === active ? "w-8 bg-metal" : "w-3 bg-silver-50"
+                      "h-2 rounded-full transition-all",
+                      i === active ? "w-8 bg-ink" : "w-2 bg-silver-500/50"
                     )}
                   />
                 ))}
@@ -102,10 +102,10 @@ export function HowItWorks() {
                     i === active ? "lg:opacity-100" : "lg:opacity-35"
                   )}
                 >
-                  <span className="inline-flex h-16 min-w-16 items-center justify-center rounded-xl border-2 border-charcoal bg-metal px-3 font-display text-5xl font-extrabold leading-none text-charcoal shadow-[4px_4px_0_0_#3F4347]">
+                  <span className="inline-flex h-11 min-w-11 items-center justify-center rounded-full bg-ink px-4 text-sm font-semibold text-silver-50">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="mt-5 font-display text-4xl font-bold uppercase leading-none text-charcoal md:text-5xl">
+                  <h3 className="mt-5 font-display text-3xl font-semibold leading-tight tracking-tight text-ink md:text-5xl">
                     {s.title}
                   </h3>
                   <p className="mt-4 max-w-md text-lg leading-relaxed text-charcoal-soft">

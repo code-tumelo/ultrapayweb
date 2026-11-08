@@ -1,17 +1,19 @@
 import { Check } from "lucide-react";
 
-import { VendorScene } from "@/components/vendor-scene";
+import { WalletCard } from "@/components/wallet-card";
 
 const points = ["No bank account", "No credit check", "No monthly fee"];
 
 export function Unbanked() {
   return (
-    <section id="unbanked" className="scroll-mt-16 py-24 md:py-32">
+    <section id="unbanked" className="scroll-mt-16 overflow-x-clip py-24 md:py-32">
       <div className="container grid items-center gap-14 lg:grid-cols-2">
         <div>
-          <h2 className="font-display text-5xl font-extrabold uppercase leading-[1.02] tracking-tight text-charcoal md:text-7xl">
+          <h2 className="font-display text-4xl font-semibold leading-[1.08] tracking-tight text-ink md:text-6xl">
             No bank account?{" "}
-            <span className="bg-metal px-2 [box-decoration-break:clone]">No problem.</span>
+            <span className="bg-gradient-to-r from-charcoal via-silver-500 to-charcoal bg-clip-text text-transparent">
+              No problem.
+            </span>
           </h2>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
             Most taxi commuters, and many vendors, don&apos;t have a bank
@@ -22,7 +24,7 @@ export function Unbanked() {
             {points.map((p) => (
               <li
                 key={p}
-                className="flex items-center gap-2 rounded-md border-2 border-charcoal bg-silver-50 px-4 py-2 text-sm font-bold uppercase tracking-wide text-charcoal shadow-[3px_3px_0_0_#3F4347]"
+                className="flex items-center gap-2 rounded-full border border-ink/10 bg-silver-50 px-4 py-2 text-sm font-semibold text-ink shadow-sm"
               >
                 <Check className="h-4 w-4" strokeWidth={3} />
                 {p}
@@ -30,10 +32,8 @@ export function Unbanked() {
             ))}
           </ul>
 
-          <div className="mt-10 max-w-xl border-l-8 border-silver-300 pl-5">
-            <h3 className="font-display text-3xl font-bold uppercase leading-none text-charcoal">
-              A wallet, not a bank account
-            </h3>
+          <div className="mt-10 max-w-xl rounded-3xl bg-silver-100 p-6">
+            <h3 className="font-display text-xl font-semibold text-ink">A wallet, not a bank account</h3>
             <p className="mt-3 leading-relaxed text-charcoal-soft">
               Open an UltraPay wallet with your phone number and ID — no bank
               account, no credit check, no monthly fee. Top it up with cash at
@@ -42,7 +42,7 @@ export function Unbanked() {
           </div>
         </div>
 
-        <VendorScene />
+        <WalletCard />
       </div>
     </section>
   );

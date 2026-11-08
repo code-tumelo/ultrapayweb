@@ -4,23 +4,23 @@
 
 @layer base {
   :root {
-    /* White page, black ink, one taxi-yellow accent (used as a fill, never as text on white) */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 4%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 4%;
-    --taxi: 46 100% 50%;
-    --primary: 46 100% 50%;
-    --primary-foreground: 0 0% 4%;
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 4%;
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 32%;
-    --accent: 0 0% 94%;
-    --accent-foreground: 0 0% 4%;
-    --border: 0 0% 0% / 0.14;
-    --input: 0 0% 0% / 0.3;
-    --ring: 0 0% 8%;
+    /* Silver palette: Platinum #F3F4F5, Metallic Silver #E6E7E9, Light Silver #BFC3C8,
+       Medium Grey #8A8F95, Dark Charcoal #3F4347 */
+    --background: 210 9% 96%;
+    --foreground: 210 6% 26%;
+    --card: 210 9% 96%;
+    --card-foreground: 210 6% 26%;
+    --primary: 200 8% 6%;
+    --primary-foreground: 210 9% 96%;
+    --secondary: 220 5% 91%;
+    --secondary-foreground: 210 6% 26%;
+    --muted: 220 5% 91%;
+    --muted-foreground: 210 6% 36%;
+    --accent: 220 5% 91%;
+    --accent-foreground: 210 6% 26%;
+    --border: 210 6% 26% / 0.25;
+    --input: 210 6% 26% / 0.45;
+    --ring: 210 6% 26%;
     --radius: 0.625rem;
   }
 
@@ -38,188 +38,53 @@
   }
 
   ::selection {
-    background: hsl(var(--taxi));
-    color: #000;
+    background: #bfc3c8;
+    color: #3f4347;
   }
 }
 
 @layer components {
-  /* The black-and-yellow check seen on taxi roofs and rank signage */
-  .checker {
-    background: repeating-conic-gradient(#050505 0% 25%, hsl(var(--taxi)) 0% 50%) 0 0 / 20px 20px;
+  /* Brushed-silver fill: the highlight used where the old accent colour sat */
+  .bg-metal {
+    background-image: linear-gradient(
+      135deg,
+      #e6e7e9 0%,
+      #bfc3c8 38%,
+      #f3f4f5 52%,
+      #bfc3c8 100%
+    );
+  }
+  /* Same idea, on dark bands */
+  .bg-metal-dark {
+    background-image: linear-gradient(135deg, #3f4347 0%, #50555a 45%, #3f4347 100%);
   }
 }
 
-/* ------------------------------------------------------------------ */
-/* Illustrated scenes                                                  */
-/* ------------------------------------------------------------------ */
-
-.pivot-top {
-  transform-box: fill-box;
-  transform-origin: 50% 0%;
+@layer components {
+  /* Brushed-silver card face: the UltraPay wallet card */
+  .card-metal {
+    background-image:
+      linear-gradient(115deg, transparent 0%, rgba(255,255,255,0.55) 30%, transparent 46%),
+      linear-gradient(135deg, #f3f4f5 0%, #bfc3c8 38%, #e6e7e9 58%, #8a8f95 100%);
+  }
+  /* Black card face with a faint metallic sheen */
+  .card-ink {
+    background-image:
+      linear-gradient(115deg, transparent 0%, rgba(191,195,200,0.18) 32%, transparent 48%),
+      linear-gradient(145deg, #3f4347 0%, #1a1c1e 45%, #0e0f10 100%);
+  }
+  /* Frosted glass chip */
+  .glass {
+    background: rgba(243, 244, 245, 0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+  }
+  .dot-grid {
+    background-image: radial-gradient(rgba(63, 67, 71, 0.16) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
 }
-.pivot-bottom {
-  transform-box: fill-box;
-  transform-origin: 50% 100%;
-}
-
-.s-chip,
-.s-beam,
-.s-coin {
-  opacity: 0;
-}
-
-/* ---- Hero scene: one loop = 10s ---- */
-.s-commuter { animation: s-commuter 10s ease-in-out infinite; }
-.s-legA     { animation: s-legA 10s ease-in-out infinite; }
-.s-legB     { animation: s-legB 10s ease-in-out infinite; }
-.s-arm      { animation: s-arm 10s ease-in-out infinite; }
-.s-beam     { animation: s-beam 10s linear infinite; }
-.s-coin     { animation: s-coin 10s ease-in-out infinite; }
-.s-nod      { animation: s-nod 10s ease-in-out infinite; }
-.s-chip-fare   { animation: s-chip-fare 10s ease-out infinite; }
-.s-chip-paid   { animation: s-chip-paid 10s ease-out infinite; }
-.s-chip-driver { animation: s-chip-driver 10s ease-out infinite; }
-
-@keyframes s-commuter {
-  0%   { transform: translateX(-200px); opacity: 0; }
-  3%   { opacity: 1; }
-  30%, 66% { transform: translateX(0); opacity: 1; }
-  80%, 100% { transform: translateX(90px); opacity: 0; }
-}
-@keyframes s-legA {
-  0% { transform: rotate(0); }
-  3% { transform: rotate(20deg); } 6% { transform: rotate(-20deg); }
-  9% { transform: rotate(20deg); } 12% { transform: rotate(-20deg); }
-  15% { transform: rotate(20deg); } 18% { transform: rotate(-20deg); }
-  21% { transform: rotate(20deg); } 24% { transform: rotate(-20deg); }
-  27% { transform: rotate(20deg); } 30%, 66% { transform: rotate(0); }
-  69% { transform: rotate(20deg); } 72% { transform: rotate(-20deg); }
-  75% { transform: rotate(20deg); } 78% { transform: rotate(-20deg); }
-  80%, 100% { transform: rotate(0); }
-}
-@keyframes s-legB {
-  0% { transform: rotate(0); }
-  3% { transform: rotate(-20deg); } 6% { transform: rotate(20deg); }
-  9% { transform: rotate(-20deg); } 12% { transform: rotate(20deg); }
-  15% { transform: rotate(-20deg); } 18% { transform: rotate(20deg); }
-  21% { transform: rotate(-20deg); } 24% { transform: rotate(20deg); }
-  27% { transform: rotate(-20deg); } 30%, 66% { transform: rotate(0); }
-  69% { transform: rotate(-20deg); } 72% { transform: rotate(20deg); }
-  75% { transform: rotate(-20deg); } 78% { transform: rotate(20deg); }
-  80%, 100% { transform: rotate(0); }
-}
-@keyframes s-arm {
-  0%, 30% { transform: rotate(0); }
-  38%, 60% { transform: rotate(-72deg); }
-  66%, 100% { transform: rotate(0); }
-}
-@keyframes s-beam {
-  0%, 38% { opacity: 0; }
-  40% { opacity: 0.9; } 45% { opacity: 0.4; } 50% { opacity: 0.9; } 55% { opacity: 0.4; }
-  58%, 100% { opacity: 0; }
-}
-@keyframes s-chip-fare {
-  0%, 40% { opacity: 0; transform: translateY(8px) scale(0.8); }
-  44%, 56% { opacity: 1; transform: translateY(0) scale(1); }
-  59%, 100% { opacity: 0; transform: translateY(0) scale(1); }
-}
-@keyframes s-chip-paid {
-  0%, 58% { opacity: 0; transform: translateY(8px) scale(0.8); }
-  62%, 78% { opacity: 1; transform: translateY(0) scale(1); }
-  82%, 100% { opacity: 0; transform: translateY(0) scale(1); }
-}
-@keyframes s-chip-driver {
-  0%, 60% { opacity: 0; transform: translateY(8px) scale(0.8); }
-  64%, 82% { opacity: 1; transform: translateY(0) scale(1); }
-  86%, 100% { opacity: 0; transform: translateY(0) scale(1); }
-}
-@keyframes s-coin {
-  0%, 55% { opacity: 0; transform: translate(0, 0); }
-  57% { opacity: 1; transform: translate(0, 0); }
-  63% { opacity: 1; transform: translate(186px, -118px); }
-  64%, 100% { opacity: 0; transform: translate(186px, -118px); }
-}
-@keyframes s-nod {
-  0%, 60% { transform: translateY(0); }
-  63% { transform: translateY(3px); }
-  66%, 100% { transform: translateY(0); }
-}
-
-/* ---- Spaza shop scene: one loop = 9s ---- */
-.s2-customer { animation: s2-customer 9s ease-in-out infinite; }
-.s2-legA     { animation: s2-legA 9s ease-in-out infinite; }
-.s2-legB     { animation: s2-legB 9s ease-in-out infinite; }
-.s2-arm      { animation: s2-arm 9s ease-in-out infinite; }
-.s2-note     { animation: s2-note 9s steps(1, end) infinite; }
-.s2-vendor   { animation: s2-vendor 9s ease-in-out infinite; }
-.s2-chip-cash   { animation: s2-chip-cash 9s ease-out infinite; }
-.s2-chip-wallet { animation: s2-chip-wallet 9s ease-out infinite; }
-
-@keyframes s2-customer {
-  0%   { transform: translateX(-170px); opacity: 0; }
-  3%   { opacity: 1; }
-  24%, 84% { transform: translateX(0); opacity: 1; }
-  94%, 100% { transform: translateX(0); opacity: 0; }
-}
-@keyframes s2-legA {
-  0% { transform: rotate(0); }
-  3% { transform: rotate(20deg); } 6% { transform: rotate(-20deg); }
-  9% { transform: rotate(20deg); } 12% { transform: rotate(-20deg); }
-  15% { transform: rotate(20deg); } 18% { transform: rotate(-20deg); }
-  21% { transform: rotate(20deg); } 24%, 100% { transform: rotate(0); }
-}
-@keyframes s2-legB {
-  0% { transform: rotate(0); }
-  3% { transform: rotate(-20deg); } 6% { transform: rotate(20deg); }
-  9% { transform: rotate(-20deg); } 12% { transform: rotate(20deg); }
-  15% { transform: rotate(-20deg); } 18% { transform: rotate(20deg); }
-  21% { transform: rotate(-20deg); } 24%, 100% { transform: rotate(0); }
-}
-@keyframes s2-arm {
-  0%, 28% { transform: rotate(0); }
-  36%, 48% { transform: rotate(-80deg); }
-  56%, 100% { transform: rotate(0); }
-}
-@keyframes s2-note {
-  0%  { opacity: 1; }
-  47% { opacity: 0; }
-  100% { opacity: 0; }
-}
-@keyframes s2-vendor {
-  0%, 46% { transform: translateY(0); }
-  49% { transform: translateY(3px); }
-  52%, 100% { transform: translateY(0); }
-}
-@keyframes s2-chip-cash {
-  0%, 36% { opacity: 0; transform: translateY(8px) scale(0.8); }
-  40%, 52% { opacity: 1; transform: translateY(0) scale(1); }
-  55%, 100% { opacity: 0; transform: translateY(0) scale(1); }
-}
-@keyframes s2-chip-wallet {
-  0%, 56% { opacity: 0; transform: translateY(8px) scale(0.8); }
-  60%, 84% { opacity: 1; transform: translateY(0) scale(1); }
-  88%, 100% { opacity: 0; transform: translateY(0) scale(1); }
-}
-
-/* ---- Driving taxi in the footer ---- */
-.taxi-drive {
-  animation: taxi-drive 24s linear infinite;
-}
-@keyframes taxi-drive {
-  from { transform: translateX(-200px); }
-  to   { transform: translateX(100vw); }
-}
-.spin-wheel {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: wheel 0.7s linear infinite;
-}
-@keyframes wheel {
-  to { transform: rotate(360deg); }
-}
-
-/* ------------------------------------------------------------------ */
 
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -231,19 +96,5 @@
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-  }
-  /* Scenes show a still frame instead of a loop: everyone visible, payment done */
-  .scene *,
-  .taxi-drive,
-  .taxi-drive * {
-    animation: none !important;
-  }
-  .scene .s-chip-paid,
-  .scene .s-chip-driver,
-  .scene .s2-chip-wallet {
-    opacity: 1;
-  }
-  .taxi-drive {
-    transform: translateX(20vw);
   }
 }

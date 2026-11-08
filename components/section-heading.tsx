@@ -11,16 +11,18 @@ export function SectionHeading({ eyebrow, title, description, inverted = false }
     <div className="max-w-3xl">
       {eyebrow && (
         <p
-          className={`flex items-center gap-3 text-sm font-bold uppercase tracking-[0.2em] ${
-            inverted ? "text-silver-300" : "text-foreground"
+          className={`inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold tracking-wide ${
+            inverted
+              ? "border-silver-50/20 bg-silver-50/5 text-silver-300"
+              : "border-ink/10 bg-silver-50 text-charcoal-soft"
           }`}
         >
-          <span aria-hidden className="h-1.5 w-8 bg-metal" />
+          <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-metal ring-1 ring-ink/20" />
           {eyebrow}
         </p>
       )}
       <h2
-        className={`mt-4 font-display text-4xl font-bold uppercase leading-[0.95] tracking-tight md:text-6xl ${
+        className={`mt-5 font-display text-4xl font-semibold leading-[1.08] tracking-tight md:text-6xl ${
           inverted ? "text-silver-50" : "text-foreground"
         }`}
       >

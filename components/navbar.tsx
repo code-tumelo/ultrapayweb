@@ -24,18 +24,15 @@ export function Wordmark({ inverted = false }: { inverted?: boolean }) {
         width={40}
         height={40}
         priority
-        className={cn(
-          "h-10 w-10 rounded-md border-2",
-          inverted ? "border-silver-50/40" : "border-charcoal"
-        )}
+        className="h-9 w-9 rounded-xl ring-1 ring-ink/10"
       />
       <span
         className={cn(
-          "font-display text-2xl font-extrabold uppercase leading-none tracking-wide",
-          inverted ? "text-silver-50" : "text-charcoal"
+          "font-display text-xl font-semibold leading-none tracking-tight",
+          inverted ? "text-silver-50" : "text-ink"
         )}
       >
-        Ultra<span className={inverted ? "text-silver-300" : "bg-metal px-1"}>Pay</span>
+        Ultra<span className={inverted ? "text-silver-300" : "text-silver-500"}>Pay</span>
       </span>
     </span>
   );
@@ -56,7 +53,7 @@ export function Navbar() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        scrolled || open ? "border-b border-charcoal/10 bg-silver-50/90 backdrop-blur-md" : "bg-transparent"
+        scrolled || open ? "border-b border-ink/5 bg-silver-50/80 backdrop-blur-xl" : "bg-transparent"
       )}
     >
       <nav className="container flex h-16 items-center justify-between">
@@ -92,7 +89,7 @@ export function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-charcoal/5 hover:text-foreground"
+              className="rounded-xl px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-ink/5 hover:text-foreground"
             >
               {link.label}
             </a>

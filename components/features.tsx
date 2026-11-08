@@ -1,6 +1,7 @@
 import { Banknote, FileText, Landmark, QrCode, Receipt, ShieldCheck } from "lucide-react";
 
 import { SectionHeading } from "@/components/section-heading";
+import { cn } from "@/lib/utils";
 
 const features = [
   {
@@ -8,6 +9,7 @@ const features = [
     title: "Scan & Go",
     description:
       "Every taxi gets a QR sticker. Passengers scan, confirm the fare in rand and they're on their way in seconds.",
+    dark: true,
   },
   {
     icon: Banknote,
@@ -38,27 +40,39 @@ const features = [
     title: "No cash in the taxi",
     description:
       "Approve with a PIN or fingerprint. Transactions are encrypted, and there's no cash in the taxi to attract thieves.",
+    dark: true,
   },
 ];
 
 export function Features() {
   return (
-    <section id="features" className="scroll-mt-16 border-t-2 border-charcoal py-24 md:py-32">
+    <section id="features" className="scroll-mt-16 py-24 md:py-32">
       <div className="container">
         <SectionHeading eyebrow="Features" title="One fare, one tap, every taxi" />
 
-        <div className="mt-16 grid gap-x-16 md:grid-cols-2">
-          {features.map(({ icon: Icon, title, description }) => (
-            <div key={title} className="flex gap-5 border-t border-charcoal/15 py-8">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border-2 border-charcoal bg-metal text-charcoal">
-                <Icon className="h-6 w-6" />
+        <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {features.map(({ icon: Icon, title, description, dark }) => (
+            <div
+              key={title}
+              className={cn(
+                "rounded-3xl p-7 ring-1 transition-transform duration-300 hover:-translate-y-1",
+                dark
+                  ? "card-ink text-silver-50 ring-ink/20"
+                  : "bg-silver-50 text-ink ring-ink/10 shadow-sm"
+              )}
+            >
+              <div
+                className={cn(
+                  "flex h-12 w-12 items-center justify-center rounded-2xl",
+                  dark ? "bg-silver-50/10 text-silver-50" : "card-metal text-ink"
+                )}
+              >
+                <Icon className="h-6 w-6" strokeWidth={1.75} />
               </div>
-              <div>
-                <h3 className="font-display text-2xl font-bold uppercase leading-none text-charcoal">
-                  {title}
-                </h3>
-                <p className="mt-2 leading-relaxed text-charcoal-soft">{description}</p>
-              </div>
+              <h3 className="mt-14 font-display text-xl font-semibold tracking-tight">{title}</h3>
+              <p className={cn("mt-2 leading-relaxed", dark ? "text-silver-300" : "text-charcoal-soft")}>
+                {description}
+              </p>
             </div>
           ))}
         </div>

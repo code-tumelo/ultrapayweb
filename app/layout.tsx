@@ -1,19 +1,18 @@
 import type { Metadata } from "next";
-import { Barlow_Condensed, Inter } from "next/font/google";
-import Script from "next/script";
+import { Inter, Sora } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
-const display = Barlow_Condensed({
+const display = Sora({
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: ["500", "600", "700"],
   variable: "--font-display",
 });
 
 export const metadata: Metadata = {
   title: "UltraPay — Cashless taxi payments for South Africa",
   description:
-    "UltraPay is the fare payment system built for South Africa's minibus taxis — for owners, associations, drivers, vendors and commuters. Launching 31 October 2026.",
+    "UltraPay is the fare payment system built for South Africa's minibus taxis — for owners, associations, drivers, vendors and commuters. Now live.",
 };
 
 export default function RootLayout({
@@ -21,22 +20,6 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <head>
-        {/* Google tag (gtag.js) */}
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-T432YTVW61"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-T432YTVW61');
-          `}
-        </Script>
-      </head>
       <body className={`${inter.variable} ${display.variable} font-sans`}>
         {children}
       </body>

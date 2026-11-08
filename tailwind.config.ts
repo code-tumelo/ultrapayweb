@@ -24,6 +24,7 @@ const config: Config = {
           300: "#BFC3C8",
           500: "#8A8F95",
         },
+        ink: "#0E0F10",
         charcoal: {
           DEFAULT: "#3F4347",
           soft: "#565B61",
@@ -51,13 +52,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
-        // Heavy condensed capitals, like rank signage and route boards
-        display: [
-          "var(--font-display)",
-          "Impact",
-          "'Arial Narrow'",
-          ...fontFamily.sans,
-        ],
+        display: ["var(--font-display)", ...fontFamily.sans],
       },
       borderRadius: {
         lg: "var(--radius)",
