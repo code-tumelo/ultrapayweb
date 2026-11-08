@@ -59,7 +59,7 @@ export function PhoneScreen({ step }: { step: number }) {
           <Label>Confirm fare</Label>
           <div className="mt-4 rounded-2xl bg-ink p-4">
             <p className="text-xs text-silver-300">{ROUTE}</p>
-            <p className="mt-1 font-display text-6xl font-bold leading-none text-silver-50">
+            <p className="mt-1 font-display text-4xl font-bold leading-none text-silver-50">
               R18.00
             </p>
             <p className="mt-3 text-xs text-silver-300">Taxi {REG}</p>
