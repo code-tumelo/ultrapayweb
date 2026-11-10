@@ -30,7 +30,7 @@ export function Hero() {
             style={delay(0)}
           >
             <span className="h-2 w-2 rounded-full bg-ink" />
-            Now live · Built for South Africa&apos;s taxi industry
+            Now live · Made for South African taxis
           </p>
 
           <h1
@@ -47,9 +47,8 @@ export function Hero() {
             className="animate-rise mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground"
             style={delay(0.2)}
           >
-            UltraPay is the fare payment system built for South Africa&apos;s
-            minibus taxis — for owners, associations, drivers, vendors and the
-            people who ride every day.
+            UltraPay lets you pay minibus taxi fares with your phone. Owners,
+            associations, drivers, vendors and daily commuters can all use it.
           </p>
 
           <div className="animate-rise mt-8 flex flex-wrap gap-3" style={delay(0.3)}>

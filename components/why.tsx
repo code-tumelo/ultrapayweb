@@ -4,17 +4,17 @@ const reasons = [
   {
     title: "Cash is a risk",
     description:
-      "Cash invites theft, loss and arguments. With UltraPay the fare stays digital from the moment it's paid.",
+      "Cash gets stolen, goes missing and starts arguments. With UltraPay, fares are paid digitally, so there's no cash to lose.",
   },
   {
     title: "Change is a daily headache",
     description:
-      "No more sending drivers to buy change, or turning a commuter away over a few rand.",
+      "Drivers don't have to run off to find change, and nobody gets turned away because they don't have the right coins.",
   },
   {
-    title: "No records, no growth",
+    title: "Cash leaves no records",
     description:
-      "Digital fares build the takings history a small taxi business needs for finance, insurance and new vehicles.",
+      "When fares are paid digitally, you build up a history of your takings. Banks and insurers want to see that before they finance or cover a new taxi.",
   },
 ];
 

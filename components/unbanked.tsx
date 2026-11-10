@@ -16,9 +16,8 @@ export function Unbanked() {
             </span>
           </h2>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            Most taxi commuters, and many vendors, don&apos;t have a bank
-            account. With UltraPay, your phone number is enough to pay and to
-            get paid.
+            A lot of commuters and vendors don&apos;t have a bank account. With
+            UltraPay, all you need is your phone number to pay and get paid.
           </p>
           <ul className="mt-8 flex flex-wrap gap-3">
             {points.map((p) => (
@@ -35,9 +34,9 @@ export function Unbanked() {
           <div className="mt-10 max-w-xl rounded-3xl bg-silver-100 p-6">
             <h3 className="font-display text-xl font-semibold text-ink">A wallet, not a bank account</h3>
             <p className="mt-3 leading-relaxed text-charcoal-soft">
-              Open an UltraPay wallet with your phone number and ID — no bank
-              account, no credit check, no monthly fee. Top it up with cash at
-              any vendor.
+              Open an UltraPay wallet with your phone number and ID. There&apos;s
+              no credit check and no monthly fee, and you can load cash onto it
+              at any vendor.
             </p>
           </div>
         </div>

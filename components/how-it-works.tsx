@@ -10,22 +10,22 @@ const steps = [
   {
     title: "Scan the sticker",
     description:
-      "Every taxi has a QR sticker. Open your camera and scan it — it works on any smartphone.",
+      "Each taxi has a QR sticker inside. Point your phone's camera at it to scan. Any smartphone will do.",
   },
   {
     title: "Check the fare, then confirm",
     description:
-      "See exactly what you're paying in rand, then approve with your PIN or fingerprint.",
+      "You'll see the fare before you pay. If it looks right, approve it with your PIN or fingerprint.",
   },
   {
     title: "The driver is paid",
     description:
-      "The fare reaches the driver the moment the trip ends. No cash to count and no change to find.",
+      "The money goes to the driver as soon as the trip ends, so nobody has to count cash or look for change.",
   },
   {
     title: "Keep the receipt",
     description:
-      "Every ride gets a receipt with the route, time, fare and taxi registration.",
+      "You get a receipt for every ride with the route, time, fare and taxi registration on it.",
   },
 ];
 
@@ -53,7 +53,7 @@ export function HowItWorks() {
   return (
     <section id="how" className="scroll-mt-16 bg-silver-100 py-24 md:py-32">
       <div className="container">
-        <SectionHeading eyebrow="How it works" title="Scan. Confirm. Ride." />
+        <SectionHeading eyebrow="How it works" title="Paying takes a few seconds" />
 
         <div className="mt-16 grid gap-12 lg:grid-cols-2">
           {/* Sticky phone (desktop) */}

@@ -20,7 +20,7 @@ const audiences = [
     icon: Building2,
     title: "Taxi owners & operators",
     description:
-      "Know what every taxi earns. See takings by taxi, route and shift, and build the records your business needs to grow.",
+      "See exactly what each taxi brings in, by route and by shift. You'll also have proper records ready when the bank or insurer asks for them.",
   },
   {
     id: "associations",
@@ -28,7 +28,7 @@ const audiences = [
     icon: Handshake,
     title: "Taxi associations & forums",
     description:
-      "One way to pay across every member, route and rank — with clear reporting for your association.",
+      "Every member, route and rank pays the same way, and the association gets clear reports on all of it.",
   },
   {
     id: "drivers",
@@ -36,7 +36,7 @@ const audiences = [
     icon: UserRound,
     title: "Drivers",
     description:
-      "Get paid the moment the trip ends. No cash float, no hunting for change, no carrying money at night.",
+      "You get paid as soon as the trip ends. You don't need a float, you don't have to look for change, and you're not carrying cash home at night.",
   },
   {
     id: "vendors",
@@ -44,7 +44,7 @@ const audiences = [
     icon: Store,
     title: "Vendors & spaza shops",
     description:
-      "Take fare payments and cash-ins at your counter, and get your takings the same day.",
+      "Accept payments and wallet top-ups at your counter, and get your money the same day.",
   },
   {
     id: "unbanked",
@@ -52,7 +52,7 @@ const audiences = [
     icon: Wallet,
     title: "Customers without a bank account",
     description:
-      "You don't need one. Use a phone-number wallet and top it up with cash at any vendor.",
+      "That's fine. You can use a wallet linked to your phone number and load cash onto it at any vendor.",
   },
   {
     id: "commuters",
@@ -60,7 +60,7 @@ const audiences = [
     icon: Smartphone,
     title: "Commuters",
     description:
-      "Scan the sticker, check the fare in rand, ride. Works on any smartphone.",
+      "Scan the sticker in the taxi, check the fare and pay. It works on any smartphone.",
   },
 ];
 
@@ -88,8 +88,8 @@ export function Audiences() {
       <div className="container">
         <SectionHeading
           eyebrow="Who it's for"
-          title="Built for everyone on the route"
-          description="UltraPay isn't a ride-hailing app. It's the payment system for the taxis South Africa already rides — and for the vendors, spaza shops and customers without bank accounts who depend on them."
+          title="For everyone on the route"
+          description="You don't book rides with UltraPay. You use it to pay for the taxis you already take. Vendors, spaza shops and people without bank accounts can use it too."
         />
 
         <div className="mt-12">

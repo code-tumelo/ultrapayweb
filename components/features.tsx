@@ -8,38 +8,38 @@ const features = [
     icon: QrCode,
     title: "Scan & Go",
     description:
-      "Every taxi gets a QR sticker. Passengers scan, confirm the fare in rand and they're on their way in seconds.",
+      "Each taxi gets its own QR sticker. Passengers scan it, check the fare and pay in a few seconds.",
     dark: true,
   },
   {
     icon: Banknote,
     title: "Same-day driver payouts",
     description:
-      "Drivers are paid the moment the trip ends. No waiting a week and no cash to count.",
+      "Drivers get their money when the trip ends, not at the end of the week. There's no cash to count either.",
   },
   {
     icon: FileText,
     title: "Operator records",
     description:
-      "Digital takings per taxi and per route, ready to export for your accountant, your bank and your association.",
+      "See the takings for each taxi and route, and export them whenever your accountant, bank or association needs them.",
   },
   {
     icon: Landmark,
     title: "Cash out anytime",
     description:
-      "Withdraw your earnings 24/7 to any South African bank account or mobile wallet.",
+      "Send your earnings to any South African bank account or mobile wallet, at any time of day.",
   },
   {
     icon: Receipt,
     title: "Trip receipts",
     description:
-      "Every ride gets a receipt with the route, time, fare and taxi registration — useful for disputes and audits.",
+      "Every ride comes with a receipt showing the route, time, fare and taxi registration. It helps a lot when there's a dispute or an audit.",
   },
   {
     icon: ShieldCheck,
     title: "No cash in the taxi",
     description:
-      "Approve with a PIN or fingerprint. Transactions are encrypted, and there's no cash in the taxi to attract thieves.",
+      "You approve each payment with your PIN or fingerprint, and every transaction is encrypted. With no cash on board, there's nothing for thieves to take.",
     dark: true,
   },
 ];
@@ -48,7 +48,7 @@ export function Features() {
   return (
     <section id="features" className="scroll-mt-16 py-24 md:py-32">
       <div className="container">
-        <SectionHeading eyebrow="Features" title="One fare, one tap, every taxi" />
+        <SectionHeading eyebrow="Features" title="What you get with UltraPay" />
 
         <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {features.map(({ icon: Icon, title, description, dark }) => (

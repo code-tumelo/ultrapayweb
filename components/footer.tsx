@@ -16,9 +16,9 @@ export function Footer() {
             <a href="#" aria-label="UltraPay home">
               <Wordmark inverted />
             </a>
-            <p className="mt-4 text-silver-50">UltraPay — cashless taxi payments for South Africa</p>
+            <p className="mt-4 text-silver-50">Cashless taxi payments for South Africa.</p>
             <p className="mt-2 text-sm text-silver-300">
-              Proudly built in South Africa for taxi owners, associations and vendors.
+              Made in South Africa for taxi owners, associations and vendors.
             </p>
           </div>
           <nav aria-label="Footer" className="flex flex-wrap gap-x-8 gap-y-3 text-sm">
