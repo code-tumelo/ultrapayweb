@@ -12,7 +12,7 @@ const display = Sora({
 export const metadata: Metadata = {
   title: "UltraPay | Cashless taxi payments for South Africa",
   description:
-    "UltraPay lets you pay minibus taxi fares in South Africa without cash. Owners, associations, drivers, vendors and commuters can all use it, and it's live now.",
+    "UltraPay lets you pay minibus taxi fares in South Africa without cash. Owners, associations, drivers, vendors and commuters will all be able to use it. Launching soon.",
 };
 
 export default function RootLayout({

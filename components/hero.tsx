@@ -30,7 +30,7 @@ export function Hero() {
             style={delay(0)}
           >
             <span className="h-2 w-2 rounded-full bg-ink" />
-            Now live · Made for South African taxis
+            Coming soon · Made for South African taxis
           </p>
 
           <h1

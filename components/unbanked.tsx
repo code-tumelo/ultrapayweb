@@ -34,9 +34,10 @@ export function Unbanked() {
           <div className="mt-10 max-w-xl rounded-3xl bg-silver-100 p-6">
             <h3 className="font-display text-xl font-semibold text-ink">A wallet, not a bank account</h3>
             <p className="mt-3 leading-relaxed text-charcoal-soft">
-              Open an UltraPay wallet with your phone number and ID. There&apos;s
-              no credit check and no monthly fee, and you can load cash onto it
-              at any vendor.
+              When we launch, you&apos;ll open your wallet in the official UltraPay
+              app. There&apos;s no credit check and no monthly fee, and you can load
+              cash onto it at any vendor. We never ask for your ID or PIN on this
+              website.
             </p>
           </div>
         </div>

@@ -8,11 +8,11 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { href: "#audiences", label: "Who it's for" },
-  { href: "#how", label: "How it works" },
-  { href: "#unbanked", label: "No bank account" },
-  { href: "#features", label: "Features" },
-  { href: "#why", label: "Why UltraPay" },
+  { href: "/#audiences", label: "Who it's for" },
+  { href: "/#how", label: "How it works" },
+  { href: "/#unbanked", label: "No bank account" },
+  { href: "/#features", label: "Features" },
+  { href: "/#why", label: "Why UltraPay" },
 ];
 
 export function Wordmark({ inverted = false }: { inverted?: boolean }) {
@@ -57,7 +57,7 @@ export function Navbar() {
       )}
     >
       <nav className="container flex h-16 items-center justify-between">
-        <a href="#" aria-label="UltraPay home">
+        <a href="/" aria-label="UltraPay home">
           <Wordmark />
         </a>
 
