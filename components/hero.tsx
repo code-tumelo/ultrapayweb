@@ -3,6 +3,7 @@ import { Check, Receipt } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { PhoneFrame, PhoneScreen } from "@/components/phone";
+import { ComingSoonBadges } from "@/components/coming-soon-badges";
 
 const delay = (s: number) => ({ animationDelay: `${s}s` });
 
@@ -30,7 +31,7 @@ export function Hero() {
             style={delay(0)}
           >
             <span className="h-2 w-2 rounded-full bg-ink" />
-            Coming soon · Made for South African taxis
+            Coming soon to iOS &amp; Android · Made for South African taxis
           </p>
 
           <h1
@@ -59,6 +60,8 @@ export function Hero() {
               <a href="#audiences">Who it&apos;s for</a>
             </Button>
           </div>
+
+          <ComingSoonBadges className="animate-rise mt-6" />
 
           <dl
             className="animate-rise mt-12 grid max-w-xl grid-cols-3 gap-4 border-t border-ink/10 pt-6"
